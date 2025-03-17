@@ -41,10 +41,8 @@ export class TransactionService {
 
       
 
-      // Commit transaction if everything is successful
       await transaction.commit();
     } catch (error) {
-      // Rollback in case of an error
       await transaction.rollback();
       throw error;
     }
