@@ -8,7 +8,6 @@ import { Sequelize } from 'sequelize-typescript';
 export class TransactionService {
 
   constructor(
-    private readonly userService: UserService,
     @Inject('USER_REPOSITORY') private userModel: typeof User,
     @Inject('SEQUELIZE') private sequelize: Sequelize 
   ){}
